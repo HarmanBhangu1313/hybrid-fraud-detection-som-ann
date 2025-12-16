@@ -79,9 +79,8 @@ Samples flagged by the SOM are passed to an **Artificial Neural Network** for su
 ### SOM (Unsupervised Stage)
 For each input vector \(x\), the Best Matching Unit (BMU) is computed as:
 
-\[
-\text{BMU} = \arg\min_i \|x - w_i\|
-\]
+BMU = arg min||x-wi||
+           i
 
 Nodes with high average distances in the U-Matrix indicate sparse regions, which often correspond to anomalous behavior.
 
@@ -90,9 +89,7 @@ Nodes with high average distances in the U-Matrix indicate sparse regions, which
 ### ANN (Supervised Stage)
 The ANN minimizes **Binary Cross-Entropy loss**:
 
-\[
-L = -[y \log(\hat{y}) + (1 - y)\log(1 - \hat{y})]
-\]
+L = -[ylog(y^) + (1-y)log(1-y^)}
 
 This allows the model to output **probabilistic fraud scores**, which are more useful than binary predictions in risk-sensitive applications.
 
